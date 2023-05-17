@@ -87,6 +87,14 @@ class ConfigureOpenVPNConnection:
             and self.__env.settings.moderate_nat == UserSettingStatusEnum.ENABLED
         ):
             self.username = self.username + "+nr"
+        
+        # append NAT-PMP suffix
+        if (
+            #self.__env.api_session.clientconfig.features.nat_pmp
+            #and self.__env.settings.nat_pmp == UserSettingStatusEnum.ENABLED
+            True
+        ):
+            self.username = self.username + f"+{ClientSuffixEnum.NATPMP}"
 
         # append non standard ports (aka safe mode) suffix
         if self.__env.api_session.clientconfig.features.safe_mode:

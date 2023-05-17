@@ -93,6 +93,7 @@ class ClientSuffixEnum(Enum):
     NETSHIELD_ADS_TRACKING = "f2"
     NETSHIELD_NA = "f3"
     RANDOMAZIED_NAT = "nr"
+    NATPMP = "pmp"
 
 
 class KeyringEnum(Enum):

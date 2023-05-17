@@ -71,6 +71,7 @@ class ClientFeatureConfig:
         self.__safe_mode = data.get("SafeMode")
         self.__poll_notification_api = data.get("PollNotificationAPI")
         self.__vpn_accelerator = data.get("VpnAccelerator")
+        self.__nat_pmp = data.get("NATPMP")
 
     @property
     def netshield(self):
@@ -107,3 +108,7 @@ class ClientFeatureConfig:
     @property
     def vpn_accelerator(self):
         return True if self.__vpn_accelerator else False
+
+    @property
+    def nat_pmp(self):
+        return True if self.__nat_pmp else False
